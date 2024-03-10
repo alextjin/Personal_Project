@@ -1,0 +1,27 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "covid-data-report-adf-20240301-demo"
+		},
+		"ls_ablob_covidreportingdemo2024_connectionString": {
+			"value": ""
+		},
+		"ls_adls_covidreportingdldemo2024_accountKey": {
+			"value": ""
+		},
+		"ls_adls_covidreportingdldemo2024_properties_typeProperties_url": {
+			"value": "https://covidreportingdldemo2024.dfs.core.windows.net/"
+		},
+		"ls_http_opendata_ecdc_europa_eu_properties_typeProperties_url": {
+			"value": "@{linkedService().sourceBaseURL}"
+		},
+		"ls_http_opendata_ecdc_europa_eu_fixed_properties_typeProperties_url": {
+			"value": "@{linkedService().sourceBaseURL}"
+		},
+		"tr_ingest_population_data_properties_typeProperties_scope": {
+			"value": "/subscriptions/bbd3ef6d-7fe4-48cd-98db-e224fa19760d/resourceGroups/covid-reporting-fg/providers/Microsoft.Storage/storageAccounts/covidreportingdemo2024"
+		}
+	}
+}
